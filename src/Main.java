@@ -23,8 +23,9 @@ public class Main {
         }
 
 //        2.Write a Java program to reverse a string.
-//        Test Data: Input a string: The quick brown fox Expected Output: Reverse
-//        string: xof nworb kciuq ehT
+//        Test Data: Input a string: The quick brown fox
+//        Expected Output: Reverse string: xof nworb kciuq ehT
+
         System.out.println("enter an entire sentence to reverse: ");
         Scanner input = new Scanner(System.in);
         StringBuilder sentence = new StringBuilder(input.nextLine());
@@ -118,5 +119,16 @@ public class Main {
         } else {
             System.out.println(number + " is not a prime");
         }
+
+//        7.Use a for loop to print headings for four weeks (Weeks 1 - 4). Then use
+//        another for loop to print the days (Days 1 -7) for each week.
+
+        for (int i = 1; i < 5; i++) {
+            System.out.println("Week "+i);
+            for (int j = 1; j < 8; j++) {
+                System.out.println("Day "+j);
+            }
+        }
+
     }
 }
