@@ -28,9 +28,16 @@ public class Main {
 
         System.out.println("enter an entire sentence to reverse: ");
         Scanner input = new Scanner(System.in);
-        StringBuilder sentence = new StringBuilder(input.nextLine());
+        String sentence = input.nextLine();
 
-        System.out.println(sentence.reverse());
+        for (int i = sentence.length()-1; i >= 0; i--) {
+            System.out.print(sentence.toCharArray()[i]);
+        }
+        System.out.println();
+
+//        or we can use StringBuilder: but this lesson is about loops so ...
+//        StringBuilder sentence = new StringBuilder(input.nextLine());
+//        System.out.println(sentence.reverse());
 
 //        3.Write a program to find the factorial value of any number entered
 //        through the keyboard.
@@ -130,5 +137,31 @@ public class Main {
             }
         }
 
+//        8.Write a program that checks if the word is a palindrome or not. hint: A
+//        string is said to be a palindrome if it is the same if we start reading it from
+//        left to right or right to left. just like WOW
+
+        System.out.println("check palindrome words: ");
+        System.out.println("enter the word to check: ");
+
+        input.nextLine();
+        String palindromeWord = input.nextLine();
+
+        char[] palindromeArray = palindromeWord.toCharArray();
+        boolean isPalindrome = true;
+        int j = 0;
+
+        for (int i = palindromeArray.length - 1; i > 0; i--) {
+            if (palindromeArray[j] != palindromeArray[i]){
+                isPalindrome = false;
+                break;
+            }
+            j++;
+        }
+        if (isPalindrome) {
+            System.out.println(palindromeWord+" is palindrome");
+        } else {
+            System.out.println(palindromeWord+" is not palindrome");
+        }
     }
 }
