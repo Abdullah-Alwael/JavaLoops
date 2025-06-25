@@ -31,5 +31,18 @@ public class Main {
 
         System.out.println(sentence.reverse());
 
+//        3.Write a program to find the factorial value of any number entered
+//        through the keyboard.
+        System.out.println("Factorial calculator: ");
+        System.out.println("enter a number");
+        int number = input.nextInt();
+        int factorial = 1;
+
+        for (int i = number; i > 0; i--) {
+            factorial*=i; // = i = i * i
+        }
+
+        System.out.println("factorial of "+number+" is: "+factorial);
+
     }
 }
