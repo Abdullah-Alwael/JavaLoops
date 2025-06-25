@@ -44,5 +44,27 @@ public class Main {
 
         System.out.println("factorial of "+number+" is: "+factorial);
 
+//        4.Two numbers are entered through the keyboard. Write a program to find
+//        the value of one number raised to the power of another. (Do not use Java
+//        built-in method) 2^5 = 32
+
+        System.out.println("exponent calculator: ");
+
+        System.out.println("enter the base number: ");
+        int baseNumber = input.nextInt();
+
+        System.out.println("enter the exponent to raise the base number to: ");
+        int exponentNumber = input.nextInt();
+        int exponentResult = 1;
+
+        System.out.println("the result of "+baseNumber+"^"+exponentNumber+" is: ");
+
+        while (exponentNumber != 0){
+            exponentResult*=baseNumber;
+            exponentNumber--;
+        }
+
+        System.out.println(exponentResult);
+
     }
 }
