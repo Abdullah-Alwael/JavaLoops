@@ -88,5 +88,35 @@ public class Main {
         System.out.println();
         System.out.println("sum of even numbers = "+evenNumbersSum);
         System.out.println("sum of odd numbers = "+oddNumbersSum);
+
+//        6.Write a program that prompts the user to input a positive integer. It
+//        should then output a message indicating whether the number is a prime
+//        number.
+
+        System.out.println("Prime number check ");
+        do{
+            System.out.println("enter a number greater than 1: ");
+            number = input.nextInt();
+            if (number <= 1){
+                System.out.println("cant be less than 2");
+            }
+        }while(number <= 1);
+        boolean isPrime = true;
+
+        for (int i = number; i > 1 ; i--){
+            if (number%i == 1){
+                continue;
+            }
+            if(number%i == 0 && number!=i){
+                isPrime=false;
+                break;
+            }
+        }
+
+        if (isPrime){
+            System.out.println(number + " is a prime number");
+        } else {
+            System.out.println(number + " is not a prime");
+        }
     }
 }
